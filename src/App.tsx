@@ -1,8 +1,11 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
+import { Test } from "./mod-test"
+import { useValueSelector } from "./redux-components";
 
 function App() {
+  const value = useValueSelector();
   return (
     <div className="App">
       <header className="App-header">
@@ -18,6 +21,7 @@ function App() {
         >
           Learn React
         </a>
+        <Test value={value} />
       </header>
     </div>
   );
